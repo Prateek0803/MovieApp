@@ -1,38 +1,79 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+.movieApp{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color:#222222;
+    font-family: 'Crimson Pro', serif;
+    font-size: 17px;
+}
+.moviesComponent{
+    margin: 1rem;
+    width: 252px;
+    background-color: #515151;
+    color: whitesmoke;
+    box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.moviesComponent__header img{
+    max-width: 100%;
+    border-radius: 4px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.moviesComponent__info{
+    display: flex;
+    align-items: center;
+    margin: 1rem;
+    justify-content: space-between ;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.moviesComponent__overview{
+    position: absolute;
+    padding: 1rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in-out;
+    border-radius: 2px;
+    background-color: #907163;
 }
 
-.App-link {
-  color: #61dafb;
+.moviesComponent:hover .moviesComponent__overview{
+    transform: translateX(0);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header{
+    background-color: #222222;
+    color:whitesmoke;
+    display:flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.header input{
+    border-radius: 2rem;
+    width: 12rem;
+    padding:0.7rem 1.5rem;
+    margin-right: 0.5rem;
+}
+
+.logo{
+    margin-left: 1rem;
+    font-family: 'Lobster', cursive;
+}
+
+
+.searchForm input{
+    background-color: #515151;
+    border: none;
+    font-family: 'Crimson Pro',serif;
+    font-size: medium;
+    color: whitesmoke;
 }
